@@ -1,0 +1,197 @@
+Comparison: PRP or autologous blood versus placebo
+   Outcome: pain relief
+      The pain relief rates were: 38 out of 63 (60%) with placebo versus 46 out of 56 (82%) with PRP (RR 1.36, 95% CI 1.08 to 1.72).
+      38 out of 63 (60%) with placebo versus 46 out of 56 (82%) with PRP (RR 1.36, 95% CI 1.08 to 1.72) at 6 months. 
+   Outcome: mean pain
+      At 3 weeks the SMD was 0.64 (95% CI -0.28 to 1.57, 19 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 6 weeks the SMD was 0.14 (95% CI -0.1 to 0.38, 491 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 3 months the SMD was -0.06 (95% CI -0.26 to 0.13, 474 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 6 months the SMD was -0.16 (95% CI -0.67 to 0.34, 308 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 12 months the SMD was -0.44 (95% CI -1.14 to 0.26, 162 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+   Outcome: function
+      At 3 weeks the SMD was 0.59 (95% CI -0.34 to 1.51, 19 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 6 weeks the SMD was 0.15 (95% CI -0.04 to 0.34, 430 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 3 months the SMD was -0.04 (95% CI -0.26 to 0.18, 423 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 12 months the SMD was -0.14 (95% CI -0.64 to 0.35, 300 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 12 months the SMD was -0.74 (95% CI -1.98 to 0.51, 124 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+   Outcome: treatment success
+      The treatment success rates were: 121 out of 185 (65%) with placebo versus 125 out of 187 (67%) with PRP (RR 1.02, 95% CI 0.89 to 1.17).
+ERROR: Bad Outcome Name,  Outcome: Health-related quality of life
+   Outcome: grip strength
+      None of the studies measured this outcome.
+Comparison: PRP or autologous blood versus steroid injection
+   Outcome: mean pain
+      At 3 weeks the SMD was 1.22 (95% CI 0.31 to 2.12, 280 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 6 weeks the SMD was 0.46 (95% CI 0.04 to 0.89, 627 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 3 months the SMD was -0.54 (95% CI -0.89 to -0.18, 547 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 6 months the SMD was -0.78 (95% CI -1.09 to -0.47, 427 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 1 year the SMD was -0.91 (95% CI -1.25 to -0.58, 178 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 1 year the SMD was -0.76 (95% CI -1.17 to -0.36, 100 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+   Outcome: function
+      At 3 weeks the SMD was 1.05 (95% CI -0.28 to 2.37, 170 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 6 weeks the SMD was 0.38 (95% CI 0.01 to 0.75, 644 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 3 months the SMD was -0.66 (95% CI -1.09 to -0.23, 555 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 6 months the SMD was -0.55 (95% CI -1.25 to 0.15, 374 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 1 year the SMD was -0.57 (95% CI -0.98 to -0.15, 237 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 1 year the SMD was -0.78 (95% CI -1.19 to -0.38, 100 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+   Outcome: grip strength
+      At 3 weeks the SMD was -0.52 (95% CI -0.87 to -0.16, 170 participants), and back-transformed to the [INSTRUMENT], grip strength was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 6 weeks the SMD was -0.18 (95% CI -0.65 to 0.3, 268 participants), and back-transformed to the [INSTRUMENT], grip strength was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 3 months the SMD was 0.53 (95% CI 0.06 to 1.0, 268 participants), and back-transformed to the [INSTRUMENT], grip strength was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 6 months the SMD was 0.35 (95% CI -0.13 to 0.83, 68 participants), and back-transformed to the [INSTRUMENT], grip strength was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 1 year the SMD was 0.54 (95% CI -0.11 to 1.19, 38 participants), and back-transformed to the [INSTRUMENT], grip strength was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+   Outcome: pain relief
+      The pain relief rates were: 
+      18 out of 20 (90%) with placebo versus 3 out of 18 (17%) with PRP (RR 0.19, 95% CI 0.07 to 0.53) at 6 weeks. 
+      10 out of 20 (50%) with placebo versus 15 out of 18 (83%) with PRP (RR 1.67, 95% CI 1.03 to 2.71) at 1 year. 
+   Outcome: treatment success
+      The treatment success rates were: 
+      54 out of 115 (47%) with placebo versus 25 out of 122 (20%) with PRP (RR 0.34, 95% CI 0.09 to 1.29) at 6 weeks. 
+      31 out of 54 (57%) with placebo versus 43 out of 54 (80%) with PRP (RR 1.31, 95% CI 0.77 to 2.24) at 3 mo. 
+      46 out of 90 (51%) with placebo versus 44 out of 97 (45%) with PRP (RR 1.02, 95% CI 0.23 to 4.44) at 6 mo. 
+      49 out of 105 (47%) with placebo versus 56 out of 115 (49%) with PRP (RR 1.02, 95% CI 0.31 to 3.39) at 1 year. 
+      51 out of 95 (54%) with placebo versus 58 out of 104 (56%) with PRP (RR 1.0, 95% CI 0.31 to 3.16) at 1 year. 
+Comparison: PRP and dry needling versus dry needling alone
+   Outcome: mean pain
+      At 3 months, mean pain was 6.02 points with placebo and 0.14 points better (95% CI 2.13 better to 1.85 worse, 28 participants) with PRP.
+      At 6 months, mean pain was 4.5 points with placebo and 0.35 points better (95% CI 2.88 better to 2.18 worse, 28 participants) with PRP.
+   Outcome: function
+      At 3 months, function was 28.7 points with placebo and 2.8 points worse (95% CI 16.88 better to 22.48 worse, 28 participants) with PRP.
+      At 6 months, function was 45.4 points with placebo and 5.7 points worse (95% CI 14.36 better to 25.76 worse, 28 participants) with PRP.
+   Outcome: grip strength
+      None of the studies measured this outcome.
+   Outcome: treatment success
+      None of the studies measured this outcome.
+   Outcome: pain relief
+      None of the studies measured this outcome.
+Comparison: PRP versus autologous blood
+   Outcome: mean pain
+      At 6 weeks, mean pain was 3.73 points with placebo and 0.53 points better (95% CI 1.85 better to 0.79 worse, 89 participants) with PRP.
+      At 3 months, mean pain was 3.1 points with placebo and 0.72 points better (95% CI 1.3 better to 0.14 better, 89 participants) with PRP.
+      At 6 months, mean pain was 2.85 points with placebo and 0.66 points better (95% CI 1.36 better to 0.05 worse, 89 participants) with PRP.
+      At 12 months, mean pain was 3.9 points with placebo and 0.6 points better (95% CI 1.8 better to 0.6 worse, 61 participants) with PRP.
+   Outcome: function
+      At 6 weeks the SMD was -0.25 (95% CI -0.52 to 0.01, 226 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 3 months the SMD was -0.25 (95% CI -0.52 to 0.02, 212 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 6 months the SMD was -0.25 (95% CI -0.53 to 0.03, 217 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 12 months the SMD was -0.27 (95% CI -0.78 to 0.23, 61 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+   Outcome: treatment success
+      The treatment success rates were: 61 out of 90 (68%) with placebo versus 69 out of 101 (68%) with PRP (RR 1.03, 95% CI 0.77 to 1.37).
+   Outcome: grip strength
+      None of the studies measured this outcome.
+   Outcome: pain relief
+      None of the studies measured this outcome.
+Comparison: Autologous blood versus ESWT
+   Outcome: pain relief
+      The pain relief rates were: 
+      8 out of 20 (40%) with placebo versus 3 out of 20 (15%) with PRP (RR 0.38, 95% CI 0.12 to 1.21) at 6 Weeks. 
+      18 out of 20 (90%) with placebo versus 16 out of 20 (80%) with PRP (RR 0.89, 95% CI 0.68 to 1.16) at 1 Year. 
+   Outcome: mean pain
+      At 6 weeks, mean pain was 44.2 points with placebo and 6.3 points worse (95% CI 2.81 better to 15.41 worse, 37 participants) with PRP.
+      At 3 months, mean pain was 22.6 points with placebo and 2.9 points worse (95% CI 7.51 better to 13.31 worse, 37 participants) with PRP.
+      At 6 months, mean pain was 22.1 points with placebo and 2.3 points worse (95% CI 7.8 better to 12.4 worse, 37 participants) with PRP.
+      At 1 year, mean pain was 21.0 points with placebo and 2.3 points worse (95% CI 6.06 better to 10.66 worse, 37 participants) with PRP.
+   Outcome: function
+      At 6 weeks, function was 30.0 points with placebo and 3.8 points worse (95% CI 1.56 better to 9.16 worse, 37 participants) with PRP.
+      At 3 months, function was 18.1 points with placebo and 1.4 points worse (95% CI 5.82 better to 8.62 worse, 37 participants) with PRP.
+      At 6 months, function was 19.2 points with placebo and 1.5 points worse (95% CI 4.17 better to 7.17 worse, 37 participants) with PRP.
+      At 1 year, function was 19.5 points with placebo and 0.9 points better (95% CI 5.98 better to 4.18 worse, 37 participants) with PRP.
+   Outcome: grip strength
+      At 6 weeks the SMD was 0.05 (95% CI -0.6 to 0.69, 37 participants), and back-transformed to the [INSTRUMENT], grip strength was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 3 months the SMD was 0.18 (95% CI -0.47 to 0.82, 37 participants), and back-transformed to the [INSTRUMENT], grip strength was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 6 months the SMD was 0.05 (95% CI -0.59 to 0.7, 37 participants), and back-transformed to the [INSTRUMENT], grip strength was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At 1 year the SMD was -0.43 (95% CI -1.08 to 0.23, 37 participants), and back-transformed to the [INSTRUMENT], grip strength was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+   Outcome: treatment success
+      None of the studies measured this outcome.
+Comparison: Subgroups PRP and blood versus corticosteroid at 3 months
+   Outcome: mean pain
+      At PRP the SMD was -0.49 (95% CI -1.29 to 0.3, 190 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At Autologous blood the SMD was -0.53 (95% CI -0.94 to -0.12, 357 participants), and back-transformed to the [INSTRUMENT], mean pain was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+   Outcome: function
+      At PRP the SMD was -0.82 (95% CI -1.57 to -0.06, 290 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At Autologous blood the SMD was -0.59 (95% CI -1.22 to 0.04, 225 participants), and back-transformed to the [INSTRUMENT], function was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+   Outcome: grip strength
+      At PRP the SMD was 0.53 (95% CI -0.55 to 1.62, 90 participants), and back-transformed to the [INSTRUMENT], grip strength was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+      At Autologous blood the SMD was 0.51 (95% CI -0.12 to 1.14, 178 participants), and back-transformed to the [INSTRUMENT], grip strength was 0.0 with placebo and 0.0 points worse (95% CI 0.0 worse to 0.0 worse) with PRP.
+   Outcome: treatment success
+      None of the studies measured this outcome.
+   Outcome: pain relief
+      None of the studies measured this outcome.
+Comparison: PRP versus arthroscopic surgery
+   Outcome: mean pain
+      At 3 months, mean pain was 2.2 points with placebo and 0.7 points better (95% CI 1.68 better to 0.28 worse, 101 participants) with PRP.
+      At 6 months, mean pain was 1.4 points with placebo and 0.3 points better (95% CI 1.14 better to 0.54 worse, 101 participants) with PRP.
+      At 12 months, mean pain was 1.3 points with placebo and 0.7 points better (95% CI 1.52 better to 0.12 worse, 101 participants) with PRP.
+      At 24 months, mean pain was 2.1 points with placebo and 5.0 points worse (95% CI 4.02 worse to 5.98 worse, 101 participants) with PRP.
+   Outcome: function
+      At 3 months, function was 27.2 points with placebo and 9.5 points better (95% CI 17.69 better to 1.31 better, 101 participants) with PRP.
+      At 6 months, function was 19.0 points with placebo and 6.7 points better (95% CI 13.84 better to 0.44 worse, 101 participants) with PRP.
+      At 12 months, function was 14.2 points with placebo and 5.2 points better (95% CI 11.53 better to 1.13 worse, 101 participants) with PRP.
+      At 24 months, function was 21.2 points with placebo and 48.0 points worse (95% CI 40.2 worse to 55.8 worse, 101 participants) with PRP.
+   Outcome: grip strength
+      At 3 months, grip strength was 48.4 points with placebo and 1.0 points worse (95% CI 0.99 better to 2.99 worse, 101 participants) with PRP.
+      At 6 months, grip strength was 50.2 points with placebo and 26.8 points better (95% CI 29.03 better to 24.57 better, 101 participants) with PRP.
+      At 12 months, grip strength was 47.3 points with placebo and 23.7 points better (95% CI 25.59 better to 21.81 better, 101 participants) with PRP.
+      At 24 months, grip strength was 48.4 points with placebo and 25.6 points better (95% CI 27.31 better to 23.89 better, 101 participants) with PRP.
+   Outcome: treatment success
+      None of the studies measured this outcome.
+   Outcome: pain relief
+      None of the studies measured this outcome.
+Comparison: Autologous blood plus bandage and exercise versus bandage and exercise
+   Outcome: function
+      At 3 months, function was 8.6 points with placebo and 1.6 points worse (95% CI 2.19 better to 5.39 worse, 45 participants) with PRP.
+      At 6 months, function was 3.9 points with placebo and 2.46 points worse (95% CI 0.41 better to 5.33 worse, 45 participants) with PRP.
+   Outcome: grip strength
+      At 3 months, grip strength was 29.1 points with placebo and 2.2 points better (95% CI 7.1 better to 2.7 worse, 45 participants) with PRP.
+      At 6 months, grip strength was 30.9 points with placebo and 3.0 points better (95% CI 8.85 better to 2.85 worse, 45 participants) with PRP.
+ERROR: Bad Outcome Name,  Outcome: Response to treatment score
+      13 out of 13 (100%) with placebo versus 29 out of 32 (91%) with PRP (RR -0.09, 95% CI -0.24 to 0.05) at 3 months. 
+      13 out of 13 (100%) with placebo versus 31 out of 32 (97%) with PRP (RR -0.03, 95% CI -0.15 to 0.09) at 6 months. 
+   Outcome: mean pain
+      None of the studies measured this outcome.
+   Outcome: treatment success
+      None of the studies measured this outcome.
+   Outcome: pain relief
+      None of the studies measured this outcome.
+Comparison: PRP versus laser applications
+   Outcome: mean pain
+      At 3 month, mean pain was 4.7 points with placebo and 1.0 points better (95% CI 2.13 better to 0.13 worse, 56 participants) with PRP.
+      At 6 month, mean pain was 3.6 points with placebo and 0.9 points better (95% CI 1.9 better to 0.1 worse, 56 participants) with PRP.
+      At 12 month, mean pain was 2.7 points with placebo and 0.9 points better (95% CI 2.03 better to 0.23 worse, 56 participants) with PRP.
+   Outcome: function
+      At 3 month, function was 38.9 points with placebo and 9.1 points better (95% CI 20.03 better to 1.83 worse, 56 participants) with PRP.
+      At 6 month, function was 29.0 points with placebo and 2.5 points better (95% CI 13.22 better to 8.22 worse, 56 participants) with PRP.
+      At 12 month, function was 26.7 points with placebo and 8.5 points better (95% CI 19.32 better to 2.32 worse, 56 participants) with PRP.
+   Outcome: treatment success
+      The treatment success rates were: 14 out of 29 (48%) with placebo versus 19 out of 27 (70%) with PRP (RR 1.46, 95% CI 0.93 to 2.28).
+   Outcome: grip strength
+      None of the studies measured this outcome.
+   Outcome: pain relief
+      None of the studies measured this outcome.
+Comparison: Autologous blood versus polidocanol injection
+   Outcome: function
+      At 6 weeks, function was 9.2 points with placebo and 4.4 points worse (95% CI 10.76 better to 19.56 worse, 30 participants) with PRP.
+      At 3 months, function was 19.9 points with placebo and 2.1 points better (95% CI 16.78 better to 12.58 worse, 30 participants) with PRP.
+      At 6 months, function was 28.9 points with placebo and 0.5 points worse (95% CI 15.21 better to 16.21 worse, 30 participants) with PRP.
+   Outcome: treatment success
+      The treatment success rates were: 
+      2 out of 16 (13%) with placebo versus 3 out of 14 (21%) with PRP (RR 1.71, 95% CI 0.33 to 8.83) at 6 weeks. 
+      6 out of 16 (38%) with placebo versus 5 out of 14 (36%) with PRP (RR 0.95, 95% CI 0.37 to 2.45) at 3 months. 
+      13 out of 16 (81%) with placebo versus 9 out of 14 (64%) with PRP (RR 0.79, 95% CI 0.5 to 1.25) at 6 months. 
+   Outcome: mean pain
+      None of the studies measured this outcome.
+   Outcome: grip strength
+      None of the studies measured this outcome.
+   Outcome: pain relief
+      None of the studies measured this outcome.
+Comparison: PRP vs physical therapy
+   Outcome: mean pain
+      At 6 weeks, mean pain was -29.2 points with placebo and 11.4 points better (95% CI 18.58 better to 4.22 better, 120 participants) with PRP.
+   Outcome: function
+      At 6 weeks, function was -8.42 points with placebo and 7.81 points better (95% CI 12.71 better to 2.91 better, 105 participants) with PRP.
+   Outcome: grip strength
+      None of the studies measured this outcome.
+   Outcome: treatment success
+      None of the studies measured this outcome.
+   Outcome: pain relief
+      None of the studies measured this outcome.

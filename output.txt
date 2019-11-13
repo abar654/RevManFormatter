@@ -1,0 +1,153 @@
+Comparison: PRP or autologous blood versus placebo
+   Outcome: pain relief
+      Timepoint: 6 months
+   Outcome: mean pain
+      Timepoint: upto 3 weeks
+      Timepoint: >3 weeks to 6 weeks
+      Timepoint: >6 weeks to 3 months
+      Timepoint: > 3 months to 6 months
+      Timepoint: > 6 months to 12 months
+   Outcome: function
+      Timepoint: upto 3 weeks
+      Timepoint: >3 weeks to 6 weeks
+      Timepoint: >6 weeks to 3 months
+      Timepoint: >6 months to 12 months
+      Timepoint: 12 months
+   Outcome: function
+ERROR: Bad Outcome Name,  Outcome: Health-related quality of life
+   Outcome: withdrawals
+   Outcome: adverse events
+Comparison: PRP or autologous blood versus steroid injection
+   Outcome: mean pain
+      Timepoint: upto 3 weeks
+      Timepoint: >3 weeks to 6 weeks
+      Timepoint: >6 weeks to 3 months
+      Timepoint: >3 months to 6 months
+      Timepoint: >6 months to 1 year
+      Timepoint: >1 year
+   Outcome: function
+      Timepoint: upto 3 weeks
+      Timepoint: >3 weeks to 6 weeks
+      Timepoint: >6 weeks to 3 months
+      Timepoint: >3 months to 6 months
+      Timepoint: >6 months to 1 year
+      Timepoint: >1 year
+   Outcome: grip strength
+      Timepoint: upto 3 weeks
+      Timepoint: >3 weeks to 6 weeks
+      Timepoint: >6 weeks to 3 months
+      Timepoint: >3 months to 6 months
+      Timepoint: >6 months to 1 year
+   Outcome: adverse events
+   Outcome: pain relief
+      Timepoint: 6 weeks
+      Timepoint: 1 year
+   Outcome: treatment success
+      Timepoint: up to 6 weeks
+      Timepoint: >6 weeks to 3 mo
+      Timepoint: >3 mo to 6 mo
+      Timepoint: >6 mo to 1 year
+      Timepoint: >1 year
+Comparison: PRP and dry needling versus dry needling alone
+ERROR: Bad Outcome Name,  Outcome: Pain
+      Timepoint: >6 weeks to 3 months
+      Timepoint: >3 months to 6 months
+   Outcome: function
+      Timepoint: >6 weeks to 3 months
+      Timepoint: >3 months to 6 months
+   Outcome: adverse events
+   Outcome: adverse events
+Comparison: PRP versus autologous blood
+   Outcome: mean pain
+      Timepoint: >3 weeks to 6 weeks
+      Timepoint: >6 weeks to 3 months
+      Timepoint: >3 months to 6 months
+      Timepoint: >6 months to 12 months
+   Outcome: function
+      Timepoint: >3 weeks to 6 weeks
+      Timepoint: >6 weeks to 3 months
+      Timepoint: >3 months to 6 months
+      Timepoint: >6 months to 12 months
+   Outcome: treatment success
+   Outcome: adverse events
+Comparison: Autologous blood versus ESWT
+   Outcome: pain relief
+      Timepoint: 6 Weeks
+      Timepoint: 1 Year
+   Outcome: mean pain
+      Timepoint: >3 weeks to 6 weeks
+      Timepoint: >6 weeks to 3 months
+      Timepoint: >3 months to 6 months
+      Timepoint: >6 months to 1 year
+   Outcome: function
+      Timepoint: >3 weeks to 6 weeks
+      Timepoint: >6 weeks to 3 months
+      Timepoint: >3 months to 6 months
+      Timepoint: >6 months to 1 year
+   Outcome: grip strength
+      Timepoint: >3 weeks to 6 weeks
+      Timepoint: >6 weeks to 3 months
+      Timepoint: >3 months to 6 months
+      Timepoint: >6 months to 1 year
+   Outcome: adverse events
+Comparison: Subgroups PRP and blood versus corticosteroid at 3 months
+   Outcome: mean pain
+      Timepoint: PRP
+      Timepoint: Autologous blood
+   Outcome: function
+      Timepoint: PRP
+      Timepoint: Autologous blood
+   Outcome: grip strength
+      Timepoint: PRP
+      Timepoint: Autologous blood
+Comparison: PRP versus arthroscopic surgery
+   Outcome: mean pain
+      Timepoint: 3 months
+      Timepoint: 6 months
+      Timepoint: 12 months
+      Timepoint: 24 months
+   Outcome: function
+      Timepoint: 3 months
+      Timepoint: 6 months
+      Timepoint: 12 months
+      Timepoint: 24 months
+   Outcome: grip strength
+      Timepoint: 3 months
+      Timepoint: 6 months
+      Timepoint: 12 months
+      Timepoint: 24 months
+Comparison: Autologous blood plus bandage and exercise versus bandage and exercise
+   Outcome: function
+      Timepoint: 3 months
+      Timepoint: 6 months
+   Outcome: grip strength
+      Timepoint: 3 months
+      Timepoint: 6 months
+ERROR: Bad Outcome Name,  Outcome: Response to treatment score
+      Timepoint: 3 months
+      Timepoint: 6 months
+Comparison: PRP versus laser applications
+ERROR: Bad Outcome Name,  Outcome: Pain
+      Timepoint: 3 month
+      Timepoint: 6 month
+      Timepoint: 12 month
+   Outcome: function
+      Timepoint: 3 month
+      Timepoint: 6 month
+      Timepoint: 12 month
+   Outcome: adverse events
+   Outcome: treatment success
+Comparison: Autologous blood versus polidocanol injection
+   Outcome: function
+      Timepoint: 6 weeks
+      Timepoint: 3 months
+      Timepoint: 6 months
+   Outcome: treatment success
+      Timepoint: 6 weeks
+      Timepoint: 3 months
+      Timepoint: 6 months
+Comparison: PRP vs physical therapy
+   Outcome: mean pain
+      Timepoint: >3 weeks to 6 weeks
+   Outcome: function
+      Timepoint: >3 weeks to 6 weeks
