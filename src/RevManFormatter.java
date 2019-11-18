@@ -7,28 +7,21 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class RevManFormatter {
-
+	
+	/*
+	 * RevMan is able to generate a CSV with the data in its data and analysis section.
+	 * This script reads in the RevMan generated CSV and pretty prints the results
+	 * with appropriate headings and formatted sentences.
+	 */
+	
 	public static void main(String[] args) throws IOException {
 		
-		//Open the file for reading
-		String inputFilename = "PRPSemicolon.csv";
+		//Open the input file for reading
+		String inputFilename = "PRPUpdated.csv";
 		File inputFile = new File(inputFilename);
 		Scanner input = new Scanner(inputFile);
 		
-		//Open file for output of benefits
-		FileWriter benefitsFile = new FileWriter("benefits.txt");
-		BufferedWriter benefitsWriter = new BufferedWriter(benefitsFile);
-		//Open file for output of harms
-		FileWriter harmsFile = new FileWriter("harms.txt");
-		BufferedWriter harmsWriter = new BufferedWriter(harmsFile);
-		//Open file for output of which outcomes/timepoints we need back conversion data
-		FileWriter SMDFile = new FileWriter("SMD.csv");
-		BufferedWriter SMDWriter = new BufferedWriter(SMDFile);
-		
-		//Write the head for the SMD file
-		SMDWriter.write("Comparison-Outcome-Timepoint, Back Transform Instrument, SD for Back Transform\n");
-		
-		//Possible outcomes:
+		//Possible outcomes from the input file
 		String[] possibleOutcomes = {	"mean pain",
 										"function",
 										"pain relief",
@@ -36,11 +29,39 @@ public class RevManFormatter {
 										"grip strength",
 										"withdrawal",
 										"adverse events"};
-		
+				
 		//Set to keep track of which outcomes haven't been seen for the current comparison
 		HashSet<String> unseenOutcomes = new HashSet<String>();
 		
-		//Remove the header line
+		//Open file for output of benefits
+		FileWriter benefitsFile = new FileWriter("benefits.txt");
+		BufferedWriter benefitsWriter = new BufferedWriter(benefitsFile);
+		
+		//Open file for output of harms
+		FileWriter harmsFile = new FileWriter("harms.txt");
+		BufferedWriter harmsWriter = new BufferedWriter(harmsFile);
+		
+		//Open file for output of which outcomes/timepoints we need back transform data for
+		FileWriter SMDFile = new FileWriter("SMD.csv");
+		BufferedWriter SMDWriter = new BufferedWriter(SMDFile);
+		//Write the head for the SMD file
+		SMDWriter.write("Comparison-Outcome-Timepoint, Back Transform Instrument, SD for Back Transform\n");
+		
+		//Open the SMDInput file if it exists and create a scanner
+		//This scanner will be used in the same section where the SMD.csv is created
+		boolean existsSMDInput = true;
+		Scanner smdInput = null;
+		if(existsSMDInput) {
+			String smdInputFilename = "SMDInputUpdated.csv";
+			File smdInputFile = new File(smdInputFilename);
+			smdInput = new Scanner(smdInputFile);
+			//Remove the header line from the input
+			if(smdInput.hasNextLine()) {
+				String trash = smdInput.nextLine();
+			}
+		}
+		
+		//Remove the header line from the input CSV
 		if(input.hasNextLine()) {
 			String trash = input.nextLine();
 		}
@@ -52,6 +73,7 @@ public class RevManFormatter {
 		//		Timepoint 2
 		//	Outcome 2
 		
+		//Keep track of the outcome and comparison we are currently working with
 		String currentOutcome = null;
 		String currentComparison = null;
 		
@@ -61,19 +83,23 @@ public class RevManFormatter {
 		while(input.hasNextLine() || inputBuffer != null) {
 			
 			//Get the next line
+			//If there is something in the input buffer then use it, then clear the input buffer
 			String nextInputLine = inputBuffer;
 			if(nextInputLine == null) {
 				nextInputLine = input.nextLine();
 			}
 			inputBuffer = null;
 			
+			//Split the csvRow into its columns
 			String[]csvRow = nextInputLine.split(";", -1);
 			
-			//Decide if the line is useful
+			//Decide if the line is a comparison, an outcome, or a timepoint
+			//The decision criteria are based on patterns recognised in the csv
+			//Unfortunately the csv does not have any "nice" labelling scheme for its rows
 			if(csvRow[4].equals("") && csvRow[5].equals("")) {
 				
-				//We have a comparison
-				System.out.print(unseenOutcomes.toString());
+				//This is a comparison row so we have a new comparison.				
+				//Tidy up from the last comparison (if there was one)
 				//Print out any outcomes that were missed in the last comparison
 				for(String outcome : unseenOutcomes) {
 					if(outcome.equals(possibleOutcomes[5]) || outcome.equals(possibleOutcomes[6])) {
@@ -85,24 +111,25 @@ public class RevManFormatter {
 					}
 				}
 				
-				//Reset the HashSet to be full
+				//Reset the HashSet tracking unseen outcomes to be full
 				unseenOutcomes = new HashSet<String>();
 				for(String outcome : possibleOutcomes) {
 					unseenOutcomes.add(outcome);
 				}
 				
-				//Print out the new comparison and update
+				//Print out the new comparison and update the current comparison
 				benefitsWriter.write("Comparison: " + csvRow[0] +"\n");
 				harmsWriter.write("Comparison: " + csvRow[0] +"\n");
-				
 				currentComparison = csvRow[0];
 				
 			} else if((csvRow[1].equals("CON") && csvRow[5].equals("")) ||
 					(csvRow[1].equals("DIC") && csvRow[5].equals("")) ||
 					(!csvRow[24].equals(""))) {
 				
-				//We have an outcome
-				//Find out which outcome
+				//This is an outcome row
+				//We need to match this outcome to one of the possible outcomes
+				//This is because outcomes have been entered manually 
+				//and differ slightly for each comparison and may contain typos.
 				boolean found = false;
 				for(String outcome: possibleOutcomes) {
 					if(csvRow[0].toLowerCase().contains(outcome)) {
@@ -114,12 +141,14 @@ public class RevManFormatter {
 							currentOutcome = possibleOutcomes[3];
 						}
 						
+						//Output this outcome's heading to the correct file
 						if(currentOutcome.equals(possibleOutcomes[5]) || currentOutcome.equals(possibleOutcomes[6])) {
 							harmsWriter.write("   Outcome: " + currentOutcome +"\n");
 						} else {
 							benefitsWriter.write("   Outcome: " + currentOutcome +"\n");
 						}
 						
+						//Track that we have seen this outcome for this comparison.
 						unseenOutcomes.remove(currentOutcome);
 						
 						//If this is dichotomous then we need to print the start of the sentence
@@ -129,6 +158,7 @@ public class RevManFormatter {
 						
 							//If this is one of the outcomes with no timepoints then we must print
 							//the rest of its sentence.
+							//Build the sentence according to the desired format.
 							if(!csvRow[24].equals("")) {
 								
 								double effect =  Math.round(Double.parseDouble(csvRow[13])*100.0)/100.0;
@@ -150,6 +180,7 @@ public class RevManFormatter {
 								
 							}
 							
+							//Output the sentence to the correct output file.
 							if(currentOutcome.equals(possibleOutcomes[5]) || currentOutcome.equals(possibleOutcomes[6])) {
 								harmsWriter.write("      " + outputString +"\n");
 							} else {
@@ -158,19 +189,33 @@ public class RevManFormatter {
 							
 						}
 						
+						//If we have already identified the outcome we need to break
+						//This avoids double matching to TWO possible outcomes
+						//The order of the possible outcomes is also the matching hierarchy
 						found = true;
 						break;
 						
 					}
 				}
 				
+				//If we did not match this outcome to one of the possible outcomes we need to
+				//handle it or print an error message to the user.
 				if(!found) {
-					//Deal with the mean pain written as "Pain" exception
+					
 					if(csvRow[0].toLowerCase().contains("pain")) {
+						
+						//User has input "pain" where they mean "mean pain"
 						currentOutcome = "mean pain";
 						benefitsWriter.write("   Outcome: " + currentOutcome +"\n");
 						unseenOutcomes.remove(currentOutcome);
+						
 					} else {
+						
+						//We do not know how to handle this outcome so print an error
+						//Still update the current outcome though
+						//This means that the outcome will still be treated like other outcomes
+						//However, the grammar in its generated sentences may not be very nice.
+						System.out.println("ERROR: Bad Outcome Name,  Outcome: " + csvRow[0] +"\n");
 						benefitsWriter.write("ERROR: Bad Outcome Name,  Outcome: " + csvRow[0] +"\n");
 						currentOutcome = csvRow[0];
 					}
@@ -178,8 +223,10 @@ public class RevManFormatter {
 				
 			} else if(!csvRow[1].equals("")) {
 
-				//Find the correct timepoint
-				//Take the timepoint string from the LAST occurrence of a number
+				//This is a timepoint row
+				//Find the correct timepoint string to be printed.
+				//This is generally the later end of the timepoints period.
+				//Take the timepoint string from the LAST occurrence of a number.
 				int lastOccurenceIndex = 0;
 				int i;
 				
@@ -196,7 +243,9 @@ public class RevManFormatter {
 				String sentence = "";
 				
 				//Decide what kind of effect measure this is
+				//Output a sentence accordingly with the data for this timepoint
 				if(csvRow[3].equals("Risk Ratio") || csvRow[3].equals("Risk Difference")) {
+					
 					//Dichotomous outcome
 					double effect =  Math.round(Double.parseDouble(csvRow[13])*100.0)/100.0;
 					double upper = Math.round(Double.parseDouble(csvRow[15])*100.0)/100.0;
@@ -228,21 +277,53 @@ public class RevManFormatter {
 					
 					int participants = Integer.parseInt(csvRow[8]) + Integer.parseInt(csvRow[12]);
 					
-					//TO DO: Still need to add all this back transformed info
+					//Initialise and set backtransform info incase there is no input data
 					String btInstrument = "[INSTRUMENT]";
-					double btPlacebo = 0;
 					double btEffect = 0;
 					double btUpper = 0;
 					double btLower = 0;
 					
+					//If SMD input data exists then we can update the backtransform variables
+					if(existsSMDInput) {
+						
+						String btInput = smdInput.nextLine();
+						String[] btInputVals = btInput.split(",");
+						
+						//Check that the btInput is for this outcome
+						if(btInputVals[0].equals(currentComparison + "-" + currentOutcome + "-" + timepoint)) {
+							
+							//Extract the Instrument and the SD
+							btInstrument = btInputVals[1];
+							double sd = Double.parseDouble(btInputVals[2]);
+							
+							//Use the SD to calculate the bt values (simply multiply)
+							btEffect = effect * sd;
+							btUpper = upper * sd;
+							btLower = lower * sd;
+							
+							//Round values to 2 dp
+							btEffect = Math.round(btEffect*100.0)/100.0;
+							btUpper = Math.round(btUpper*100.0)/100.0;
+							btLower = Math.round(btLower*100.0)/100.0;
+							
+
+						} else {
+							
+							System.out.println("Match ERROR: " + currentComparison + "-" + currentOutcome + "-" + timepoint);
+							
+						}
+						
+					}
+					
 					//Need to set better or worse for each value depending on sign.
-					String borwBtEffect = "worse";
+					//Negative is better.
+					String borwBtEffect = "increase";
 					String borwBtUpper = "worse";
 					String borwBtLower = "worse";
 					
 					if(btEffect < 0) {
 						btEffect = btEffect*-1;
-						borwBtEffect = "better";
+						borwBtEffect = "reduction";
 					}
 					if(btUpper < 0) {
 						btUpper = btUpper*-1;
@@ -253,22 +334,36 @@ public class RevManFormatter {
 						borwBtLower = "better";
 					}
 					
-					sentence = "At " + timepoint + " the SMD was " + effect + " (95% CI " 
-							+ upper + " to " + lower + ", " + participants + " participants), and back-transformed to the "
-							+ btInstrument + ", "+ currentOutcome + " was " + btPlacebo
-							+ " with placebo and " + btEffect + " points " + borwBtEffect
-							+ " (95% CI " + btUpper + " " + borwBtUpper + " to " + btLower
-							+ " " + borwBtLower + ") with PRP.";
+					//Need to treat the subgroup analysis slightly differently here
+					if(currentComparison.equals("Subgroups PRP and blood versus corticosteroid at 3 months")) {
+						
+						sentence = "At 3 months, for " + currentOutcome + " the SMD was " + effect + " (95% CI " 
+								+ upper + " to " + lower + ", " + participants + " participants), which back-transforms to a mean "
+								+ borwBtEffect + " of " + btEffect + " points (95% CI " + btUpper + " " + borwBtUpper + " to " + btLower
+								+ " " + borwBtLower + ") on the " + btInstrument + " scale with " + timepoint + ".";
+						
+					} else {
+						
+						sentence = "At " + timepoint + ", for " + currentOutcome + " the SMD was " + effect + " (95% CI " 
+								+ upper + " to " + lower + ", " + participants + " participants), which back-transforms to a mean "
+								+ borwBtEffect + " of " + btEffect + " points (95% CI " + btUpper + " " + borwBtUpper + " to " + btLower
+								+ " " + borwBtLower + ") on the " + btInstrument + " scale with PRP.";
+						
+					}
 					
 				} else if(csvRow[3].equals("Mean Difference")) {
 					
 					//MD outcome
-					//Need to calculate the points
+					//Need to calculate the points for the effect size
+					//This is a weighted average of the placebo mean from each study
 					double points = 0;
 					
-					//Read newlines so long as they aren't a new timepoint or outcome [something in 4]
-					//or new comparison [nothing in 4 and 5]
+					//The next lines in the file contain the data for each study contributing to this timepoint.
+					//So we read newlines so long as they aren't a new timepoint or outcome [something in 4]
+					//or new comparison [nothing in 4 and 5].
 					//If we read to a new line that isn't a study then we store it in the inputBuffer
+					//so that it can be appropriately handled in the next iteration of the main while loop
+					//(this also means that we have found the last study related to this timepoint).
 					boolean readAllStudies = false;
 					
 					while(!readAllStudies && input.hasNextLine()) {
@@ -278,13 +373,17 @@ public class RevManFormatter {
 						
 						//Check if this line is a study
 						if(!studyCSVRow[4].equals("") || (studyCSVRow[4].equals("") && studyCSVRow[5].equals(""))) {
+							
 							//Not a study so need to save the line
 							inputBuffer = studyLine;
 							readAllStudies = true;
+							
 						} else {
-							//Is a study so need to add it's weighted points
+							
+							//This line is a study so need to add its weighted points
 							//weight is index 17, placebo mean is index 10
 							points += Double.parseDouble(studyCSVRow[10]) * Double.parseDouble(studyCSVRow[17])/100;
+							
 						}
 						
 					}
@@ -295,6 +394,7 @@ public class RevManFormatter {
 					double lower = Math.round(Double.parseDouble(csvRow[16])*100.0)/100.0;
 					
 					//Need to set better or worse for each value depending on sign.
+					//Negative is better.
 					String borwEffect = "worse";
 					String borwUpper = "worse";
 					String borwLower = "worse";
@@ -312,6 +412,7 @@ public class RevManFormatter {
 						borwLower = "better";
 					}
 					
+					//Participants is the sum of active group and placebo group participants
 					int participants = Integer.parseInt(csvRow[8]) + Integer.parseInt(csvRow[12]);
 					
 					sentence = "At " + timepoint + ", " + currentOutcome + " was " + Math.round(points*100.0)/100.0
@@ -320,6 +421,7 @@ public class RevManFormatter {
 							+ ", " + participants + " participants) with PRP.";
 				}
 				
+				//Output the built sentence to the correct file.
 				if(currentOutcome.equals(possibleOutcomes[5]) || currentOutcome.equals(possibleOutcomes[6])) {
 					harmsWriter.write("      " + sentence +"\n");
 				} else {
@@ -329,7 +431,8 @@ public class RevManFormatter {
 			}
 		}
 		
-		//Print out any outcomes that were missed in the last comparison
+		//There are no new comparisons so we need to tidy up from the last comparison.
+		//Print out any outcomes that were missed in the last comparison.
 		for(String outcome : unseenOutcomes) {
 			if(outcome.equals(possibleOutcomes[5]) || outcome.equals(possibleOutcomes[6])) {
 				harmsWriter.write("   Outcome: " + outcome +"\n");
@@ -340,15 +443,7 @@ public class RevManFormatter {
 			}
 		}
 		
-		//Then convert them to sentences: DONE
-		
-		//Then deal with the errors/missing data: NEED TO ASK TEEMU WHAT HE WANTS
-		
-		//Then clean up the sentences so that if the outcome was "Function (DASH,MM..."
-		//it only prints as "function" in the sentence: DONE.
-		
-		//Then figure out which outcomes are missing and print their headings with the "no data" message: DONE
-		
+		//Close all streams
 		input.close();
 		benefitsWriter.close();
 		harmsWriter.close();
@@ -356,6 +451,10 @@ public class RevManFormatter {
 		benefitsFile.close();
 		harmsFile.close();
 		SMDFile.close();
+		
+		if(existsSMDInput) {
+			smdInput.close();
+		}
 	}
 
 }
