@@ -1,26 +1,26 @@
 Comparison: PRP or autologous blood versus placebo
    Outcome: withdrawal
-      The withdrawal rates were: 3 out of 39 (8%) with placebo versus 1 out of 41 (2%) with PRP (RR 0.32, 95% CI 0.03 to 2.92).
+      The withdrawal rates were: 3 out of 39 (8%) with placebo versus 1 out of 41 (2%) with PRP or autologous blood (RR 0.32, 95% CI 0.03 to 2.92).
    Outcome: adverse events
-      The adverse events rates were: 35 out of 208 (17%) with placebo versus 41 out of 217 (19%) with PRP (RR 1.14, 95% CI 0.76 to 1.72).
+      The adverse events rates were: 35 out of 208 (17%) with placebo versus 41 out of 217 (19%) with PRP or autologous blood (RR 1.14, 95% CI 0.76 to 1.72).
 Comparison: PRP or autologous blood versus steroid injection
    Outcome: adverse events
-      The adverse events rates were: 24 out of 195 (12%) with placebo versus 46 out of 201 (23%) with PRP (RR 1.64, 95% CI 0.65 to 4.12).
+      The adverse events rates were: 24 out of 195 (12%) with steroid injection versus 46 out of 201 (23%) with PRP or autologous blood (RR 1.64, 95% CI 0.65 to 4.12).
    Outcome: withdrawal
       None of the studies measured this outcome.
 Comparison: PRP and dry needling versus dry needling alone
    Outcome: adverse events
-      The adverse events rates were: 1 out of 13 (8%) with placebo versus 2 out of 15 (13%) with PRP (RR 1.73, 95% CI 0.18 to 16.99).
+      The adverse events rates were: 1 out of 13 (8%) with dry needling alone versus 2 out of 15 (13%) with PRP and dry needling (RR 1.73, 95% CI 0.18 to 16.99).
    Outcome: withdrawal
-      The withdrawal rates were: 1 out of 13 (8%) with placebo versus 2 out of 15 (13%) with PRP (RR 1.73, 95% CI 0.18 to 16.99).
+      The withdrawal rates were: 1 out of 13 (8%) with dry needling alone versus 2 out of 15 (13%) with PRP and dry needling (RR 1.73, 95% CI 0.18 to 16.99).
 Comparison: PRP versus autologous blood
    Outcome: adverse events
-      The adverse events rates were: 4 out of 14 (29%) with placebo versus 9 out of 14 (64%) with PRP (RR 2.25, 95% CI 0.9 to 5.62).
+      The adverse events rates were: 4 out of 14 (29%) with autologous blood versus 9 out of 14 (64%) with PRP (RR 2.25, 95% CI 0.9 to 5.62).
    Outcome: withdrawal
       None of the studies measured this outcome.
 Comparison: Autologous blood versus ESWT
    Outcome: adverse events
-      The adverse events rates were: 12 out of 20 (60%) with placebo versus 3 out of 20 (15%) with PRP (RR 0.25, 95% CI 0.08 to 0.75).
+      The adverse events rates were: 12 out of 20 (60%) with ESWT versus 3 out of 20 (15%) with Autologous blood (RR 0.25, 95% CI 0.08 to 0.75).
    Outcome: withdrawal
       None of the studies measured this outcome.
 Comparison: Subgroups PRP and blood versus corticosteroid at 3 months
@@ -40,7 +40,7 @@ Comparison: Autologous blood plus bandage and exercise versus bandage and exerci
       None of the studies measured this outcome.
 Comparison: PRP versus laser applications
    Outcome: adverse events
-      The adverse events rates were: 0 out of 29 (0%) with placebo versus 0 out of 27 (0%) with PRP (RR 0.0, 95% CI -0.07 to 0.07).
+      The adverse events rates were: 0 out of 29 (0%) with laser applications versus 0 out of 27 (0%) with PRP (RR 0.0, 95% CI -0.07 to 0.07).
    Outcome: withdrawal
       None of the studies measured this outcome.
 Comparison: Autologous blood versus polidocanol injection

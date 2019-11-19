@@ -121,7 +121,7 @@ public class RevManFormatter {
 				benefitsWriter.write("Comparison: " + csvRow[0] +"\n");
 				harmsWriter.write("Comparison: " + csvRow[0] +"\n");
 				currentComparison = csvRow[0];
-				
+								
 			} else if((csvRow[1].equals("CON") && csvRow[5].equals("")) ||
 					(csvRow[1].equals("DIC") && csvRow[5].equals("")) ||
 					(!csvRow[24].equals(""))) {
@@ -173,9 +173,15 @@ public class RevManFormatter {
 								int prpTotal = Integer.parseInt(csvRow[8]);
 								long prpPercent = Math.round(100.0*prpEvents/prpTotal);
 								
+								String[] comparators = currentComparison.split("versus");
+								
+								if(currentComparison.contains("vs")) {
+									comparators = currentComparison.split("vs");
+								}
+								
 								outputString = outputString + placeboEvents + " out of " + placeboTotal
-										+ " (" + placeboPercent + "%) with placebo versus " + prpEvents
-										+ " out of " + prpTotal + " (" + prpPercent + "%) with PRP (RR "
+										+ " (" + placeboPercent + "%) with " + comparators[1].trim() + " versus " + prpEvents
+										+ " out of " + prpTotal + " (" + prpPercent + "%) with " + comparators[0].trim() + " (RR "
 										+ effect + ", 95% CI " + upper + " to " + lower + ").";
 								
 							}
@@ -259,9 +265,15 @@ public class RevManFormatter {
 					int prpTotal = Integer.parseInt(csvRow[8]);
 					long prpPercent = Math.round(100.0*prpEvents/prpTotal);
 					
+					String[] comparators = currentComparison.split("versus");
+					
+					if(currentComparison.contains("vs")) {
+						comparators = currentComparison.split("vs");
+					}
+					
 					sentence = placeboEvents + " out of " + placeboTotal
-							+ " (" + placeboPercent + "%) with placebo versus " + prpEvents
-							+ " out of " + prpTotal + " (" + prpPercent + "%) with PRP (RR "
+							+ " (" + placeboPercent + "%) with " + comparators[1].trim() + " versus " + prpEvents
+							+ " out of " + prpTotal + " (" + prpPercent + "%) with " + comparators[0].trim() + " (RR "
 							+ effect + ", 95% CI " + upper + " to " + lower + ") at " + timepoint +". ";
 
 				} else if(csvRow[3].equals("Std. Mean Difference")) {
@@ -334,6 +346,12 @@ public class RevManFormatter {
 						borwBtLower = "better";
 					}
 					
+					String[] comparators = currentComparison.split("versus");
+					
+					if(currentComparison.contains("vs")) {
+						comparators = currentComparison.split("vs");
+					}
+					
 					//Need to treat the subgroup analysis slightly differently here
 					if(currentComparison.equals("Subgroups PRP and blood versus corticosteroid at 3 months")) {
 						
@@ -347,7 +365,7 @@ public class RevManFormatter {
 						sentence = "At " + timepoint + ", for " + currentOutcome + " the SMD was " + effect + " (95% CI " 
 								+ upper + " to " + lower + ", " + participants + " participants), which back-transforms to a mean "
 								+ borwBtEffect + " of " + btEffect + " points (95% CI " + btUpper + " " + borwBtUpper + " to " + btLower
-								+ " " + borwBtLower + ") on the " + btInstrument + " scale with PRP.";
+								+ " " + borwBtLower + ") on the " + btInstrument + " scale with " + comparators[0].trim() + ".";
 						
 					}
 					
@@ -412,13 +430,19 @@ public class RevManFormatter {
 						borwLower = "better";
 					}
 					
+					String[] comparators = currentComparison.split("versus");
+					
+					if(currentComparison.contains("vs")) {
+						comparators = currentComparison.split("vs");
+					}
+					
 					//Participants is the sum of active group and placebo group participants
 					int participants = Integer.parseInt(csvRow[8]) + Integer.parseInt(csvRow[12]);
 					
 					sentence = "At " + timepoint + ", " + currentOutcome + " was " + Math.round(points*100.0)/100.0
-							+ " points with placebo and " + effect + " points " + borwEffect 
+							+ " points with " + comparators[1].trim() + " and " + effect + " points " + borwEffect 
 							+ " (95% CI " + upper + " " + borwUpper + " to " + lower + " " + borwLower
-							+ ", " + participants + " participants) with PRP.";
+							+ ", " + participants + " participants) with " + comparators[0].trim() + ".";
 				}
 				
 				//Output the built sentence to the correct file.
