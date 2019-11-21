@@ -17,7 +17,7 @@ public class RevManFormatter {
 	public static void main(String[] args) throws IOException {
 		
 		//Open the input file for reading
-		String inputFilename = "PRPUpdated.csv";
+		String inputFilename = "PRPDataSemicolon.csv";
 		File inputFile = new File(inputFilename);
 		Scanner input = new Scanner(inputFile);
 		
@@ -52,7 +52,7 @@ public class RevManFormatter {
 		boolean existsSMDInput = true;
 		Scanner smdInput = null;
 		if(existsSMDInput) {
-			String smdInputFilename = "SMDInputUpdated.csv";
+			String smdInputFilename = "SMDInput-21-11.csv";
 			File smdInputFile = new File(smdInputFilename);
 			smdInput = new Scanner(smdInputFile);
 			//Remove the header line from the input
@@ -103,10 +103,10 @@ public class RevManFormatter {
 				//Print out any outcomes that were missed in the last comparison
 				for(String outcome : unseenOutcomes) {
 					if(outcome.equals(possibleOutcomes[5]) || outcome.equals(possibleOutcomes[6])) {
-						harmsWriter.write("   Outcome: " + outcome +"\n");
+						harmsWriter.write("   " + outcome +"\n");
 						harmsWriter.write("      None of the studies measured this outcome.\n");
 					} else {
-						benefitsWriter.write("   Outcome: " + outcome +"\n");
+						benefitsWriter.write("   " + outcome +"\n");
 						benefitsWriter.write("      None of the studies measured this outcome.\n");
 					}
 				}
@@ -118,8 +118,8 @@ public class RevManFormatter {
 				}
 				
 				//Print out the new comparison and update the current comparison
-				benefitsWriter.write("Comparison: " + csvRow[0] +"\n");
-				harmsWriter.write("Comparison: " + csvRow[0] +"\n");
+				benefitsWriter.write(csvRow[0] +"\n");
+				harmsWriter.write(csvRow[0] +"\n");
 				currentComparison = csvRow[0];
 								
 			} else if((csvRow[1].equals("CON") && csvRow[5].equals("")) ||
@@ -143,9 +143,9 @@ public class RevManFormatter {
 						
 						//Output this outcome's heading to the correct file
 						if(currentOutcome.equals(possibleOutcomes[5]) || currentOutcome.equals(possibleOutcomes[6])) {
-							harmsWriter.write("   Outcome: " + currentOutcome +"\n");
+							harmsWriter.write("   " + currentOutcome +"\n");
 						} else {
-							benefitsWriter.write("   Outcome: " + currentOutcome +"\n");
+							benefitsWriter.write("   " + currentOutcome +"\n");
 						}
 						
 						//Track that we have seen this outcome for this comparison.
@@ -179,11 +179,69 @@ public class RevManFormatter {
 									comparators = currentComparison.split("vs");
 								}
 								
+								//Also need to check if there is an erroneous extra line
+								//If there is then we read it and forget it exists.
+								if(input.hasNextLine()) {
+									
+									String possibleDuplicate = input.nextLine();
+									String[] dupCSVRow = possibleDuplicate.split(";", -1);
+									
+									if(!(dupCSVRow[1].equals("DIC") && csvRow[9].equals(dupCSVRow[9]) && csvRow[12].equals(dupCSVRow[12]) 
+											&& csvRow[5].equals(dupCSVRow[5]) && csvRow[8].equals(dupCSVRow[8]))) {
+										inputBuffer = possibleDuplicate;
+									}
+									
+								}
+								
+								//Count how many studies went into this outcome
+								//The next lines in the file contain the data for each study contributing to this timepoint.
+								//So we read newlines so long as they aren't a new timepoint or outcome [something in 4]
+								//or new comparison [nothing in 4 and 5].
+								//If we read to a new line that isn't a study then we store it in the inputBuffer
+								//so that it can be appropriately handled in the next iteration of the main while loop
+								//(this also means that we have found the last study related to this timepoint).
+								boolean readAllStudies = false;
+								int studyCount = 0;
+								
+								//If there is something in the inputBuffer then it will be a study
+								if(inputBuffer != null) {
+									studyCount++;
+									inputBuffer = null;
+								}
+								
+								while(!readAllStudies && input.hasNextLine()) {
+									
+									String studyLine = input.nextLine();
+									String[] studyCSVRow = studyLine.split(";", -1);
+									
+									//Check if this line is a study
+									if(!studyCSVRow[4].equals("") || (studyCSVRow[4].equals("") && studyCSVRow[5].equals(""))) {
+										
+										//Not a study so need to save the line
+										inputBuffer = studyLine;
+										readAllStudies = true;
+										
+									} else {
+										
+										//This line is a study so need to increase the study count
+										studyCount++;
+										
+									}
+									
+								}
+								
+								String studyCountString = studyCount + " studies";
+								
+								if(studyCount <= 1) {
+									studyCountString = "1 study";
+								}							
+								
 								outputString = outputString + placeboEvents + " out of " + placeboTotal
 										+ " (" + placeboPercent + "%) with " + comparators[1].trim() + " versus " + prpEvents
 										+ " out of " + prpTotal + " (" + prpPercent + "%) with " + comparators[0].trim() + " (RR "
-										+ effect + ", 95% CI " + upper + " to " + lower + ").";
+										+ effect + ", 95% CI " + upper + " to " + lower + ", " + studyCountString + ").";
 								
+
 							}
 							
 							//Output the sentence to the correct output file.
@@ -212,7 +270,7 @@ public class RevManFormatter {
 						
 						//User has input "pain" where they mean "mean pain"
 						currentOutcome = "mean pain";
-						benefitsWriter.write("   Outcome: " + currentOutcome +"\n");
+						benefitsWriter.write("   " + currentOutcome +"\n");
 						unseenOutcomes.remove(currentOutcome);
 						
 					} else {
@@ -232,14 +290,15 @@ public class RevManFormatter {
 				//This is a timepoint row
 				//Find the correct timepoint string to be printed.
 				//This is generally the later end of the timepoints period.
-				//Take the timepoint string from the LAST occurrence of a number.
+				//Take the timepoint string from the LAST occurrence of a number OR greater than sign.
 				int lastOccurenceIndex = 0;
 				int i;
 				
 				String timepoint = csvRow[0];
 				
 				for(i=0; i<timepoint.length(); i++) {
-					if(Character.isDigit(timepoint.charAt(i)) && i!=0 && !Character.isDigit(timepoint.charAt(i-1))) {
+					if((Character.isDigit(timepoint.charAt(i)) || timepoint.charAt(i)=='>') 
+							&& i!=0 && !(Character.isDigit(timepoint.charAt(i-1)) || timepoint.charAt(i-1)=='>')) {
 						lastOccurenceIndex = i;
 					}
 				}
@@ -271,10 +330,41 @@ public class RevManFormatter {
 						comparators = currentComparison.split("vs");
 					}
 					
+					//Count how many studies went into this outcome
+					boolean readAllStudies = false;
+					int studyCount = 0;
+					
+					while(!readAllStudies && input.hasNextLine()) {
+						
+						String studyLine = input.nextLine();
+						String[] studyCSVRow = studyLine.split(";", -1);
+						
+						//Check if this line is a study
+						if(!studyCSVRow[4].equals("") || (studyCSVRow[4].equals("") && studyCSVRow[5].equals(""))) {
+							
+							//Not a study so need to save the line
+							inputBuffer = studyLine;
+							readAllStudies = true;
+							
+						} else {
+							
+							//This line is a study so need to increase the study count
+							studyCount++;
+							
+						}
+						
+					}
+					
+					String studyCountString = studyCount + " studies";
+					
+					if(studyCount <= 1) {
+						studyCountString = "1 study";
+					}
+					
 					sentence = placeboEvents + " out of " + placeboTotal
 							+ " (" + placeboPercent + "%) with " + comparators[1].trim() + " versus " + prpEvents
 							+ " out of " + prpTotal + " (" + prpPercent + "%) with " + comparators[0].trim() + " (RR "
-							+ effect + ", 95% CI " + upper + " to " + lower + ") at " + timepoint +". ";
+							+ effect + ", 95% CI " + upper + " to " + lower + ", " + studyCountString + ") at " + timepoint +". ";
 
 				} else if(csvRow[3].equals("Std. Mean Difference")) {
 					
@@ -352,18 +442,49 @@ public class RevManFormatter {
 						comparators = currentComparison.split("vs");
 					}
 					
+					//Count how many studies went into this outcome
+					boolean readAllStudies = false;
+					int studyCount = 0;
+					
+					while(!readAllStudies && input.hasNextLine()) {
+						
+						String studyLine = input.nextLine();
+						String[] studyCSVRow = studyLine.split(";", -1);
+						
+						//Check if this line is a study
+						if(!studyCSVRow[4].equals("") || (studyCSVRow[4].equals("") && studyCSVRow[5].equals(""))) {
+							
+							//Not a study so need to save the line
+							inputBuffer = studyLine;
+							readAllStudies = true;
+							
+						} else {
+							
+							//This line is a study so need to increase the study count
+							studyCount++;
+							
+						}
+						
+					}
+					
+					String studyCountString = studyCount + " studies";
+					
+					if(studyCount <= 1) {
+						studyCountString = "1 study";
+					}
+					
 					//Need to treat the subgroup analysis slightly differently here
-					if(currentComparison.equals("Subgroups PRP and blood versus corticosteroid at 3 months")) {
+					if(currentComparison.contains("Subgroup")) {
 						
 						sentence = "At 3 months, for " + currentOutcome + " the SMD was " + effect + " (95% CI " 
-								+ upper + " to " + lower + ", " + participants + " participants), which back-transforms to a mean "
+								+ upper + " to " + lower + ", " + studyCountString + ", " + participants + " participants), which back-transforms to a mean "
 								+ borwBtEffect + " of " + btEffect + " points (95% CI " + btUpper + " " + borwBtUpper + " to " + btLower
 								+ " " + borwBtLower + ") on the " + btInstrument + " scale with " + timepoint + ".";
 						
 					} else {
 						
 						sentence = "At " + timepoint + ", for " + currentOutcome + " the SMD was " + effect + " (95% CI " 
-								+ upper + " to " + lower + ", " + participants + " participants), which back-transforms to a mean "
+								+ upper + " to " + lower + ", " + studyCountString + ", " + participants + " participants), which back-transforms to a mean "
 								+ borwBtEffect + " of " + btEffect + " points (95% CI " + btUpper + " " + borwBtUpper + " to " + btLower
 								+ " " + borwBtLower + ") on the " + btInstrument + " scale with " + comparators[0].trim() + ".";
 						
@@ -383,6 +504,7 @@ public class RevManFormatter {
 					//so that it can be appropriately handled in the next iteration of the main while loop
 					//(this also means that we have found the last study related to this timepoint).
 					boolean readAllStudies = false;
+					int studyCount = 0;
 					
 					while(!readAllStudies && input.hasNextLine()) {
 						
@@ -401,9 +523,16 @@ public class RevManFormatter {
 							//This line is a study so need to add its weighted points
 							//weight is index 17, placebo mean is index 10
 							points += Double.parseDouble(studyCSVRow[10]) * Double.parseDouble(studyCSVRow[17])/100;
+							studyCount++;
 							
 						}
 						
+					}
+					
+					String studyCountString = studyCount + " studies";
+					
+					if(studyCount <= 1) {
+						studyCountString = "1 study";
 					}
 					
 					//Need to set values for effect, upper and lower
@@ -442,7 +571,7 @@ public class RevManFormatter {
 					sentence = "At " + timepoint + ", " + currentOutcome + " was " + Math.round(points*100.0)/100.0
 							+ " points with " + comparators[1].trim() + " and " + effect + " points " + borwEffect 
 							+ " (95% CI " + upper + " " + borwUpper + " to " + lower + " " + borwLower
-							+ ", " + participants + " participants) with " + comparators[0].trim() + ".";
+							+ ", " + studyCountString + ", " + participants + " participants) with " + comparators[0].trim() + ".";
 				}
 				
 				//Output the built sentence to the correct file.
@@ -459,10 +588,10 @@ public class RevManFormatter {
 		//Print out any outcomes that were missed in the last comparison.
 		for(String outcome : unseenOutcomes) {
 			if(outcome.equals(possibleOutcomes[5]) || outcome.equals(possibleOutcomes[6])) {
-				harmsWriter.write("   Outcome: " + outcome +"\n");
+				harmsWriter.write("   " + outcome +"\n");
 				harmsWriter.write("      None of the studies measured this outcome.\n");
 			} else {
-				benefitsWriter.write("   Outcome: " + outcome +"\n");
+				benefitsWriter.write("   " + outcome +"\n");
 				benefitsWriter.write("      None of the studies measured this outcome.\n");
 			}
 		}
