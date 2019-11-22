@@ -17,7 +17,7 @@ public class RevManFormatter {
 	public static void main(String[] args) throws IOException {
 		
 		//Open the input file for reading
-		String inputFilename = "PRPDataSemicolon.csv";
+		String inputFilename = "PRPData-22-11.csv";
 		File inputFile = new File(inputFilename);
 		Scanner input = new Scanner(inputFile);
 		
@@ -52,7 +52,7 @@ public class RevManFormatter {
 		boolean existsSMDInput = true;
 		Scanner smdInput = null;
 		if(existsSMDInput) {
-			String smdInputFilename = "SMDInput-21-11.csv";
+			String smdInputFilename = "SMDInput-22-11.csv";
 			File smdInputFile = new File(smdInputFilename);
 			smdInput = new Scanner(smdInputFile);
 			//Remove the header line from the input
@@ -155,6 +155,10 @@ public class RevManFormatter {
 						if(csvRow[1].equals("DIC")) {
 							
 							String outputString = "The " + currentOutcome + " rates were: ";
+							
+							if(currentComparison.contains("Subgroup")) {
+								outputString = "THE FOLLOWING OUTCOME IS NOT HANDLED BY SCRIPT FOR THIS COMPARISON, PLEASE IGNORE: " + currentOutcome + "\n";
+							}
 						
 							//If this is one of the outcomes with no timepoints then we must print
 							//the rest of its sentence.
@@ -568,10 +572,22 @@ public class RevManFormatter {
 					//Participants is the sum of active group and placebo group participants
 					int participants = Integer.parseInt(csvRow[8]) + Integer.parseInt(csvRow[12]);
 					
-					sentence = "At " + timepoint + ", " + currentOutcome + " was " + Math.round(points*100.0)/100.0
-							+ " points with " + comparators[1].trim() + " and " + effect + " points " + borwEffect 
-							+ " (95% CI " + upper + " " + borwUpper + " to " + lower + " " + borwLower
-							+ ", " + studyCountString + ", " + participants + " participants) with " + comparators[0].trim() + ".";
+					//Need to treat the subgroup analysis slightly differently here
+					if(currentComparison.contains("Subgroup")) {
+						
+						sentence = "At 3 months, " + currentOutcome + " was " + Math.round(points*100.0)/100.0
+								+ " points with control and " + effect + " points " + borwEffect 
+								+ " (95% CI " + upper + " " + borwUpper + " to " + lower + " " + borwLower
+								+ ", " + studyCountString + ", " + participants + " participants) with " + timepoint + ".";
+						
+					} else {
+					
+						sentence = "At " + timepoint + ", " + currentOutcome + " was " + Math.round(points*100.0)/100.0
+								+ " points with " + comparators[1].trim() + " and " + effect + " points " + borwEffect 
+								+ " (95% CI " + upper + " " + borwUpper + " to " + lower + " " + borwLower
+								+ ", " + studyCountString + ", " + participants + " participants) with " + comparators[0].trim() + ".";
+						
+					}
 				}
 				
 				//Output the built sentence to the correct file.

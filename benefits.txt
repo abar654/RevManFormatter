@@ -3,17 +3,17 @@ PRP or autologous blood versus placebo
       The pain relief rates were: 
       38 out of 63 (60%) with placebo versus 46 out of 56 (82%) with PRP or autologous blood (RR 1.36, 95% CI 1.08 to 1.72, 1 study) at 6 months. 
    mean pain
-      At 3 weeks, for mean pain the SMD was 0.64 (95% CI -0.28 to 1.57, 1 study, 19 participants), which back-transforms to a mean increase of 0.64 points (95% CI 0.28 better to 1.57 worse) on the VAS (0 to 10) scale with PRP or autologous blood.
-      At 6 weeks, for mean pain the SMD was 0.14 (95% CI -0.1 to 0.38, 6 studies, 491 participants), which back-transforms to a mean increase of 0.14 points (95% CI 0.1 better to 0.38 worse) on the VAS (0 to 10) scale with PRP or autologous blood.
-      At 3 months, for mean pain the SMD was -0.06 (95% CI -0.26 to 0.13, 7 studies, 474 participants), which back-transforms to a mean reduction of 0.06 points (95% CI 0.26 better to 0.13 worse) on the VAS (0 to 10) scale with PRP or autologous blood.
-      At 6 months, for mean pain the SMD was -0.16 (95% CI -0.67 to 0.34, 6 studies, 308 participants), which back-transforms to a mean reduction of 0.16 points (95% CI 0.67 better to 0.34 worse) on the VAS (0 to 10) scale with PRP or autologous blood.
-      At 12 months, for mean pain the SMD was -0.44 (95% CI -1.14 to 0.26, 4 studies, 162 participants), which back-transforms to a mean reduction of 0.44 points (95% CI 1.14 better to 0.26 worse) on the VAS (0 to 10) scale with PRP or autologous blood.
+      At 3 weeks, mean pain was 3.0 points with placebo and 2.0 points worse (95% CI 0.65 better to 4.65 worse, 1 study, 19 participants) with PRP or autologous blood.
+      At 6 weeks, mean pain was 3.35 points with placebo and 0.36 points worse (95% CI 0.05 better to 0.78 worse, 6 studies, 491 participants) with PRP or autologous blood.
+      At 3 months, mean pain was 2.43 points with placebo and 0.16 points better (95% CI 0.66 better to 0.35 worse, 7 studies, 474 participants) with PRP or autologous blood.
+      At 6 months, mean pain was 1.64 points with placebo and 0.46 points better (95% CI 1.7 better to 0.77 worse, 6 studies, 308 participants) with PRP or autologous blood.
+      At 12 months, mean pain was 3.06 points with placebo and 0.79 points better (95% CI 2.17 better to 0.59 worse, 4 studies, 162 participants) with PRP or autologous blood.
    function
-      At 3 weeks, for function the SMD was 0.59 (95% CI -0.34 to 1.51, 1 study, 19 participants), which back-transforms to a mean increase of 11.27 points (95% CI 6.49 better to 28.84 worse) on the PRTEE scale with PRP or autologous blood.
-      At 6 weeks, for function the SMD was 0.15 (95% CI -0.04 to 0.34, 6 studies, 430 participants), which back-transforms to a mean increase of 2.87 points (95% CI 0.76 better to 6.49 worse) on the PRTEE scale with PRP or autologous blood.
-      At 3 months, for function the SMD was -0.04 (95% CI -0.26 to 0.18, 7 studies, 423 participants), which back-transforms to a mean reduction of 0.76 points (95% CI 4.97 better to 3.44 worse) on the PRTEE scale with PRP or autologous blood.
-      At 6 months, for function the SMD was -0.14 (95% CI -0.64 to 0.35, 6 studies, 300 participants), which back-transforms to a mean reduction of 2.67 points (95% CI 12.22 better to 6.69 worse) on the PRTEE scale with PRP or autologous blood.
-      At 12 months, for function the SMD was -0.74 (95% CI -1.98 to 0.51, 3 studies, 124 participants), which back-transforms to a mean reduction of 14.13 points (95% CI 37.82 better to 9.74 worse) on the PRTEE scale with PRP or autologous blood.
+      At 3 weeks, function was 24.0 points with placebo and 12.0 points worse (95% CI 5.33 better to 29.33 worse, 1 study, 19 participants) with PRP or autologous blood.
+      At 6 weeks, function was 41.21 points with placebo and 2.21 points worse (95% CI 0.87 better to 5.29 worse, 6 studies, 430 participants) with PRP or autologous blood.
+      At 3 months, function was 30.87 points with placebo and 1.44 points better (95% CI 5.15 better to 2.27 worse, 7 studies, 423 participants) with PRP or autologous blood.
+      At 6 months, function was 27.64 points with placebo and 1.61 points better (95% CI 10.23 better to 7.0 worse, 6 studies, 300 participants) with PRP or autologous blood.
+      At 12 months, function was 32.78 points with placebo and 6.11 points better (95% CI 20.7 better to 8.48 worse, 3 studies, 124 participants) with PRP or autologous blood.
    treatment success
       The treatment success rates were: 121 out of 185 (65%) with placebo versus 125 out of 187 (67%) with PRP or autologous blood (RR 1.02, 95% CI 0.89 to 1.17, 4 studies).
 ERROR: Bad Outcome Name,  Outcome: Health-related quality of life
@@ -25,19 +25,19 @@ PRP or autologous blood versus corticosteroid injection
       18 out of 20 (90%) with corticosteroid injection versus 3 out of 18 (17%) with PRP or autologous blood (RR 0.19, 95% CI 0.07 to 0.53, 1 study) at 6 weeks. 
       10 out of 20 (50%) with corticosteroid injection versus 15 out of 18 (83%) with PRP or autologous blood (RR 1.67, 95% CI 1.03 to 2.71, 1 study) at 1 year. 
    mean pain
-      At 3 weeks, for mean pain the SMD was 1.22 (95% CI 0.31 to 2.12, 5 studies, 280 participants), which back-transforms to a mean increase of 1.22 points (95% CI 0.31 worse to 2.12 worse) on the VAS (0 to 10) scale with PRP or autologous blood.
-      At 6 weeks, for mean pain the SMD was 0.42 (95% CI -0.04 to 0.87, 12 studies, 547 participants), which back-transforms to a mean increase of 0.42 points (95% CI 0.04 better to 0.87 worse) on the VAS (0 to 10) scale with PRP or autologous blood.
-      At 3 months, for mean pain the SMD was -0.54 (95% CI -0.89 to -0.18, 10 studies, 547 participants), which back-transforms to a mean reduction of 0.54 points (95% CI 0.89 better to 0.18 better) on the VAS (0 to 10) scale with PRP or autologous blood.
-      At 6 months, for mean pain the SMD was -0.78 (95% CI -1.09 to -0.47, 8 studies, 427 participants), which back-transforms to a mean reduction of 0.78 points (95% CI 1.09 better to 0.47 better) on the VAS (0 to 10) scale with PRP or autologous blood.
-      At 1 year, for mean pain the SMD was -0.91 (95% CI -1.25 to -0.58, 3 studies, 178 participants), which back-transforms to a mean reduction of 0.91 points (95% CI 1.25 better to 0.58 better) on the VAS (0 to 10) scale with PRP or autologous blood.
-      At >1 year, for mean pain the SMD was -0.76 (95% CI -1.17 to -0.36, 1 study, 100 participants), which back-transforms to a mean reduction of 0.76 points (95% CI 1.17 better to 0.36 better) on the VAS (0 to 10) scale with PRP or autologous blood.
+      At 3 weeks, mean pain was 3.43 points with corticosteroid injection and 2.06 points worse (95% CI 0.67 worse to 3.45 worse, 5 studies, 280 participants) with PRP or autologous blood.
+      At 6 weeks, mean pain was 3.13 points with corticosteroid injection and 0.8 points worse (95% CI 0.05 worse to 1.56 worse, 12 studies, 627 participants) with PRP or autologous blood.
+      At 3 months, mean pain was 3.61 points with corticosteroid injection and 1.04 points better (95% CI 1.66 better to 0.42 better, 10 studies, 547 participants) with PRP or autologous blood.
+      At 6 months, mean pain was 3.89 points with corticosteroid injection and 1.55 points better (95% CI 2.21 better to 0.9 better, 8 studies, 427 participants) with PRP or autologous blood.
+      At 1 year, mean pain was 4.72 points with corticosteroid injection and 1.95 points better (95% CI 2.54 better to 1.35 better, 3 studies, 178 participants) with PRP or autologous blood.
+      At >1 year, mean pain was 4.24 points with corticosteroid injection and 2.11 points better (95% CI 3.19 better to 1.03 better, 1 study, 100 participants) with PRP or autologous blood.
    function
-      At 3 weeks, for function the SMD was 1.05 (95% CI -0.28 to 2.37, 3 studies, 170 participants), which back-transforms to a mean increase of 20.06 points (95% CI 5.35 better to 45.27 worse) on the PRTEE scale with PRP or autologous blood.
-      At 6 weeks, for function the SMD was 0.38 (95% CI 0.01 to 0.75, 12 studies, 644 participants), which back-transforms to a mean increase of 7.26 points (95% CI 0.19 worse to 14.33 worse) on the PRTEE scale with PRP or autologous blood.
-      At 3 months, for function the SMD was -0.66 (95% CI -1.09 to -0.23, 11 studies, 555 participants), which back-transforms to a mean reduction of 12.61 points (95% CI 20.82 better to 4.39 better) on the PRTEE scale with PRP or autologous blood.
-      At 6 months, for function the SMD was -0.55 (95% CI -1.25 to 0.15, 7 studies, 374 participants), which back-transforms to a mean reduction of 10.5 points (95% CI 23.87 better to 2.87 worse) on the PRTEE scale with PRP or autologous blood.
-      At 1 year, for function the SMD was -0.57 (95% CI -0.98 to -0.15, 3 studies, 237 participants), which back-transforms to a mean reduction of 10.89 points (95% CI 18.72 better to 2.86 better) on the PRTEE scale with PRP or autologous blood.
-      At >1 year, for function the SMD was -0.78 (95% CI -1.19 to -0.38, 1 study, 100 participants), which back-transforms to a mean reduction of 14.9 points (95% CI 22.73 better to 7.26 better) on the PRTEE scale with PRP or autologous blood.
+      At 3 weeks, function was 43.51 points with corticosteroid injection and 16.46 points worse (95% CI 4.23 better to 37.15 worse, 3 studies, 170 participants) with PRP or autologous blood.
+      At 6 weeks, function was 32.45 points with corticosteroid injection and 5.39 points worse (95% CI 0.0 worse to 10.78 worse, 12 studies, 644 participants) with PRP or autologous blood.
+      At 3 months, function was 35.41 points with corticosteroid injection and 9.8 points better (95% CI 15.03 better to 4.57 better, 11 studies, 555 participants) with PRP or autologous blood.
+      At 6 months, function was 33.22 points with corticosteroid injection and 5.07 points better (95% CI 12.66 better to 2.52 worse, 7 studies, 374 participants) with PRP or autologous blood.
+      At 1 year, function was 26.11 points with corticosteroid injection and 9.73 points better (95% CI 15.89 better to 3.58 better, 3 studies, 237 participants) with PRP or autologous blood.
+      At >1 year, function was 36.5 points with corticosteroid injection and 18.9 points better (95% CI 28.27 better to 9.53 better, 1 study, 100 participants) with PRP or autologous blood.
    treatment success
       The treatment success rates were: 
       54 out of 115 (47%) with corticosteroid injection versus 25 out of 122 (20%) with PRP or autologous blood (RR 0.34, 95% CI 0.09 to 1.29, 4 studies) at 6 weeks. 
@@ -71,10 +71,10 @@ PRP versus autologous blood
       At 6 months, mean pain was 2.85 points with autologous blood and 0.66 points better (95% CI 1.36 better to 0.05 worse, 2 studies, 89 participants) with PRP.
       At 12 months, mean pain was 3.9 points with autologous blood and 0.6 points better (95% CI 1.8 better to 0.6 worse, 1 study, 61 participants) with PRP.
    function
-      At 6 weeks, for function the SMD was -0.25 (95% CI -0.52 to 0.01, 3 studies, 226 participants), which back-transforms to a mean reduction of 4.0 points (95% CI 8.32 better to 0.16 worse) on the Mayo Elbow Performance Score scale with PRP.
-      At 3 months, for function the SMD was -0.25 (95% CI -0.52 to 0.02, 3 studies, 212 participants), which back-transforms to a mean reduction of 4.0 points (95% CI 8.32 better to 0.32 worse) on the Mayo Elbow Performance Score scale with PRP.
-      At 6 months, for function the SMD was -0.25 (95% CI -0.53 to 0.03, 3 studies, 217 participants), which back-transforms to a mean reduction of 4.0 points (95% CI 8.48 better to 0.48 worse) on the Mayo Elbow Performance Score scale with PRP.
-      At 12 months, for function the SMD was -0.27 (95% CI -0.78 to 0.23, 1 study, 61 participants), which back-transforms to a mean reduction of 4.32 points (95% CI 12.48 better to 3.68 worse) on the Mayo Elbow Performance Score scale with PRP.
+      At 6 weeks, function was 7.4 points with autologous blood and 0.98 points better (95% CI 3.33 better to 1.37 worse, 3 studies, 226 participants) with PRP.
+      At 3 months, function was 1.64 points with autologous blood and 0.49 points better (95% CI 1.05 better to 0.08 worse, 3 studies, 212 participants) with PRP.
+      At 6 months, function was 2.36 points with autologous blood and 0.67 points better (95% CI 1.99 better to 0.64 worse, 3 studies, 217 participants) with PRP.
+      At 12 months, function was 26.8 points with autologous blood and 5.0 points better (95% CI 14.04 better to 4.04 worse, 1 study, 61 participants) with PRP.
    treatment success
       The treatment success rates were: 61 out of 90 (68%) with autologous blood versus 69 out of 101 (68%) with PRP (RR 1.03, 95% CI 0.77 to 1.37, 2 studies).
    grip strength
@@ -149,7 +149,7 @@ PRP versus laser applications
       At 6 month, function was 29.0 points with laser applications and 2.5 points better (95% CI 13.22 better to 8.22 worse, 1 study, 56 participants) with PRP.
       At 12 month, function was 26.7 points with laser applications and 8.5 points better (95% CI 19.32 better to 2.32 worse, 1 study, 56 participants) with PRP.
    treatment success
-      The treatment success rates were: 14 out of 29 (48%) with laser applications versus 19 out of 27 (70%) with PRP (RR 1.46, 95% CI 0.93 to 2.28, 1 study).
+      The treatment success rates were: 
    grip strength
       None of the studies measured this outcome.
    pain relief
@@ -183,8 +183,8 @@ PRP vs physical therapy
       None of the studies measured this outcome.
 Subgroups PRP and blood versus corticosteroid at 3 months
    mean pain
-      At 3 months, for mean pain the SMD was -0.49 (95% CI -1.29 to 0.3, 4 studies, 190 participants), which back-transforms to a mean reduction of 0.49 points (95% CI 1.29 better to 0.3 worse) on the VAS (0 to 10) scale with PRP.
-      At 3 months, for mean pain the SMD was -0.53 (95% CI -0.94 to -0.12, 6 studies, 357 participants), which back-transforms to a mean reduction of 0.53 points (95% CI 0.94 better to 0.12 better) on the VAS (0 to 10) scale with Autologous blood.
+      At 3 months, mean pain was 3.04 points with control and 1.04 points better (95% CI 2.67 better to 0.58 worse, 4 studies, 190 participants) with PRP.
+      At 3 months, mean pain was 3.32 points with control and 1.08 points better (95% CI 1.8 better to 0.36 better, 6 studies, 357 participants) with Autologous blood.
    function
       At 3 months, for function the SMD was -0.82 (95% CI -1.57 to -0.06, 5 studies, 290 participants), which back-transforms to a mean reduction of 15.66 points (95% CI 29.99 better to 1.15 better) on the PRTEE scale with PRP.
       At 3 months, for function the SMD was -0.59 (95% CI -1.22 to 0.04, 5 studies, 225 participants), which back-transforms to a mean reduction of 11.27 points (95% CI 23.3 better to 0.76 worse) on the PRTEE scale with Autologous blood.
@@ -197,13 +197,14 @@ Subgroups PRP and blood versus corticosteroid at 3 months
       None of the studies measured this outcome.
 Subgroup leucocyte rich versus leucocyte poor PRP at 3 months
    mean pain
-      At 3 months, for mean pain the SMD was -0.15 (95% CI -0.38 to 0.08, 3 studies, 292 participants), which back-transforms to a mean reduction of 0.15 points (95% CI 0.38 better to 0.08 worse) on the VAS (0 to 10) scale with Leucocyte rich.
-      At 3 months, for mean pain the SMD was 0.0 (95% CI -0.34 to 0.35, 4 studies, 193 participants), which back-transforms to a mean increase of 0.0 points (95% CI 0.34 better to 0.35 worse) on the VAS (0 to 10) scale with Leucocyte poor.
+      At 3 months, mean pain was 0.3 points with control and 0.21 points better (95% CI 0.71 better to 0.3 worse, 3 studies, 292 participants) with Leucocyte rich.
+      At 3 months, mean pain was 1.87 points with control and 0.07 points better (95% CI 0.8 better to 0.66 worse, 4 studies, 193 participants) with Leucocyte poor.
    function
-      At 3 months, for function the SMD was -0.12 (95% CI -0.36 to 0.12, 3 studies, 272 participants), which back-transforms to a mean reduction of 2.29 points (95% CI 6.88 better to 2.29 worse) on the PRTEE scale with Leucocyte rich.
-      At 3 months, for function the SMD was -0.03 (95% CI -0.61 to 0.55, 3 studies, 132 participants), which back-transforms to a mean reduction of 0.57 points (95% CI 11.65 better to 10.51 worse) on the PRTEE scale with Leucocyte poor.
+      At 3 months, function was 13.3 points with control and 2.34 points better (95% CI 6.91 better to 2.23 worse, 3 studies, 272 participants) with Leucocyte rich.
+      At 3 months, function was 17.96 points with control and 0.09 points better (95% CI 8.36 better to 8.18 worse, 3 studies, 132 participants) with Leucocyte poor.
    treatment success
-      The treatment success rates were: 112 out of 190 (59%) with leucocyte poor PRP at 3 months versus 113 out of 192 (59%) with Subgroup leucocyte rich (RR 0.9, 95% CI 0.65 to 1.24, 3 studies).
+      THE FOLLOWING OUTCOME IS NOT HANDLED BY SCRIPT FOR THIS COMPARISON, PLEASE IGNORE: treatment success
+112 out of 190 (59%) with leucocyte poor PRP at 3 months versus 113 out of 192 (59%) with Subgroup leucocyte rich (RR 0.9, 95% CI 0.65 to 1.24, 3 studies).
       29 out of 52 (56%) with leucocyte poor PRP at 3 months versus 23 out of 55 (42%) with Subgroup leucocyte rich (RR 0.75, 95% CI 0.53 to 1.06, 2 studies) at Leucocyte poor. 
    grip strength
       None of the studies measured this outcome.
@@ -215,7 +216,7 @@ PRP or autologous blood versus steroid injection using MD
       At 6 weeks, mean pain was 3.3 points with steroid injection using MD and 0.88 points worse (95% CI 0.06 worse to 1.69 worse, 12 studies, 627 participants) with PRP or autologous blood.
       At 3 months, mean pain was 3.61 points with steroid injection using MD and 1.04 points better (95% CI 1.66 better to 0.42 better, 10 studies, 547 participants) with PRP or autologous blood.
       At 6 months, mean pain was 4.24 points with steroid injection using MD and 1.66 points better (95% CI 2.27 better to 1.06 better, 8 studies, 427 participants) with PRP or autologous blood.
-      At 1 year, mean pain was 38.45 points with steroid injection using MD and 15.9 points better (95% CI 25.34 better to 6.45 better, 3 studies, 178 participants) with PRP or autologous blood.
+      At 1 year, mean pain was 4.72 points with steroid injection using MD and 1.95 points better (95% CI 2.54 better to 1.35 better, 3 studies, 178 participants) with PRP or autologous blood.
       At >1 year, mean pain was 42.4 points with steroid injection using MD and 21.1 points better (95% CI 31.86 better to 10.34 better, 1 study, 100 participants) with PRP or autologous blood.
    function
       None of the studies measured this outcome.

@@ -35,7 +35,7 @@ Autologous blood plus bandage and exercise versus bandage and exercise
       None of the studies measured this outcome.
 PRP versus laser applications
    adverse events
-      The adverse events rates were: 0 out of 29 (0%) with laser applications versus 0 out of 27 (0%) with PRP (RR 0.0, 95% CI -0.07 to 0.07, 1 study).
+      The adverse events rates were: 0 out of 29 (0%) with laser applications versus 0 out of 27 (0%) with PRP (RR 0.0, 95% CI 0.0 to 0.0, 1 study).
    withdrawal
       None of the studies measured this outcome.
 Autologous blood versus polidocanol injection
@@ -55,7 +55,8 @@ Subgroups PRP and blood versus corticosteroid at 3 months
       None of the studies measured this outcome.
 Subgroup leucocyte rich versus leucocyte poor PRP at 3 months
    adverse events
-      The adverse events rates were: 35 out of 208 (17%) with leucocyte poor PRP at 3 months versus 41 out of 217 (19%) with Subgroup leucocyte rich (RR 1.14, 95% CI 0.76 to 1.72, 3 studies).
+      THE FOLLOWING OUTCOME IS NOT HANDLED BY SCRIPT FOR THIS COMPARISON, PLEASE IGNORE: adverse events
+35 out of 208 (17%) with leucocyte poor PRP at 3 months versus 41 out of 217 (19%) with Subgroup leucocyte rich (RR 1.14, 95% CI 0.76 to 1.72, 3 studies).
       10 out of 74 (14%) with leucocyte poor PRP at 3 months versus 12 out of 81 (15%) with Subgroup leucocyte rich (RR 1.15, 95% CI 0.53 to 2.51, 3 studies) at Leucocyte poor. 
    withdrawal
       None of the studies measured this outcome.
